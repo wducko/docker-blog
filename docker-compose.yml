@@ -1,0 +1,11 @@
+
+version: '3'
+
+services:
+  web:
+    image: nginx:1.19.7-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./_site:/_site
+      - ./site.conf:/etc/nginx/conf.d/default.conf
